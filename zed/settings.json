@@ -1,0 +1,216 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry",
+    },
+  },
+  "edit_predictions": {
+    "copilot": {
+      "enable_next_edit_suggestions": true
+    },
+    "provider": "copilot",
+    "mode": "subtle",
+  },
+  "base_keymap": "Emacs",
+  "ui_font_size": 20,
+  "agent_ui_font_size": 20,
+  "agent_buffer_font_size": 16,
+  "buffer_font_size": 18,
+  "buffer_font_family": "RecursiveMonospaceCasual Nerd Font",
+  "theme": "Gruvbox Dark",
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "enable_vim_sneak": true,
+  },
+  "relative_line_numbers": "enabled",
+  "editor": {
+    "highlight_line": true
+  },
+  "agent": {
+    "default_profile": "ask",
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
+    },
+    "commit_message_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
+    },
+  },
+
+  "git_panel": {
+    "tree_view": true,
+    "dock": "right",
+  },
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15,
+  },
+  "tab_bar": {
+    "show": true,
+  },
+  "tabs": {
+    "show_diagnostics": "errors",
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+  },
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+  "project_panel": {
+    "button": true,
+    "dock": "right",
+    "git_status": false,
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  // Move some unnecessary panels to the left
+  "notification_panel": {
+    "dock": "left",
+  },
+  "chat_panel": {
+    "dock": "left",
+  },
+
+  "languages": {
+    "TypeScript": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true,
+        "show_type_hints": true,
+      },
+    },
+    "HTML": {
+      "format_on_save": "off",
+    },
+    "Python": {
+      "format_on_save": "on",
+      "language_servers": ["basedpyright", "ruff"],
+      "formatter": {
+        "language_server": {
+          "name": "ruff",
+        },
+      },
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+        "source.fixAll.ruff": true,
+      },
+    },
+    "PHP": {
+      "language_servers": ["intelephense", "!phpactor"],
+      "formatter": "language_server",
+    },
+    "Vue.js": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+      "language_servers": ["vue-language-server", "typescript-language-server"],
+    },
+  },
+  "lsp": {
+    "intelephense": {
+      "settings": {
+        "environment": {
+          "phpVersion": "7.4.0",
+        },
+      },
+      "initialization_options": {
+        "storagePath": "/tmp/intelephense",
+      },
+    },
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict",
+        },
+      },
+    },
+  },
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"],
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/out",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/node_modules",
+  ],
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+
+  "terminal": {
+    "font_family": "RecursiveMonospace Nerd Font",
+    "env": {
+      "EDITOR": "zed --wait",
+    },
+    "dock": "bottom",
+    "detect_venv": {
+      "on": {
+        "activate_script": "fish",
+      },
+    },
+  },
+  "experimental.theme_overrides": {
+    "editor.background": "#00000000",
+    "background": "#000000E6",
+    "tab_bar.background": "#00000000",
+    "title_bar.background": "#000000E6",
+    "title_bar.inactive_background": "#000000E6",
+    "editor.gutter.background": "#00000000",
+    "background.appearance": "transparent",
+    "tab.active_background": "#00000000",
+    "tab.inactive_background": "#00000000",
+    "status_bar.background": "#000000E6",
+    "toolbar.background": "#00000000"
+  },
+  "theme_overrides": {
+    "Gruvbox Dark": {
+      "elevated_surface.background": "#000000E6"
+    }
+  }
+}
+}
