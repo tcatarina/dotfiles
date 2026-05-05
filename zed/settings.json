@@ -30,10 +30,36 @@
   "vim": {
     "use_system_clipboard": "always",
     "enable_vim_sneak": true,
+    "operator_suspend_mappings": {
+      "s": "vim::PushSneak"
+    },
+    "operator_replacement_mappings": {},
   },
   "relative_line_numbers": "enabled",
   "editor": {
-    "highlight_line": true
+    "highlight_line": true,
+    "soft_wrap": "column_width",
+    "text_width": 80,
+    "vertical_rules": [
+      {
+        "color": "#665c54",
+        "width": 1
+      }
+    ]
+  },
+  "indent": {
+    "tab_size": 2,
+    "preferred_line_ending": "lf",
+    "treat_tab_as_spaces": true,
+    "show_indent_guides": true,
+  },
+  "cursor": {
+    "blink": "system",
+  },
+  "search": {
+    "highlight": {
+      "enabled": false,
+    },
   },
   "agent": {
     "default_profile": "ask",
@@ -78,7 +104,7 @@
   },
   "project_panel": {
     "button": true,
-    "dock": "right",
+    "dock": "left",
     "git_status": false,
   },
   "outline_panel": {
@@ -108,7 +134,7 @@
       "format_on_save": "off",
     },
     "Python": {
-      "format_on_save": "on",
+      "format_on_save": "off",
       "language_servers": ["basedpyright", "ruff"],
       "formatter": {
         "language_server": {

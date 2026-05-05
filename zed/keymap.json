@@ -25,10 +25,10 @@
       // Search word under cursor
       "space s w": "pane::DeploySearch",
 
-      // Chat with AI
+// Chat with AI
       "space a c": "agent::ToggleFocus",
       // Go to file with `gf`
-      "g f": "editor::OpenExcerpts"
+      "g f": "editor::OpenExcerpts",
     }
   },
   {
@@ -48,7 +48,7 @@
       "space c r": "editor::Rename",
       "space o t": "terminal_panel::ToggleFocus",
       "g d": "editor::GoToDefinition",
-      "g D": "editor::GoToDefinitionSplit",
+      "g D": "editor::GoToDefinition",
       "g i": "editor::GoToImplementation",
       "g I": "editor::GoToImplementationSplit",
       "g t": "editor::GoToTypeDefinition",
@@ -59,6 +59,19 @@
       // TODO: Go to next/prev error
       "] e": "editor::GoToDiagnostic",
       "[ e": "editor::GoToPreviousDiagnostic",
+
+      // + Diagnostic keymaps (matching neovim <leader>nd/pd/d/q)
+      // <leader>nd - next diagnostic
+      "space n d": "editor::GoToDiagnostic",
+      // <leader>pd - previous diagnostic  
+      "space p d": "editor::GoToPreviousDiagnostic",
+      // <leader>d - show diagnostic details (float/popover)
+      "space d": "editor::GoToDiagnostic",
+      // <leader>q - quickfix list (Zed: diagnostics panel)
+      "space q": "diagnostics::Deploy",
+      // Ctrl+k Ctrl+i - LSP hover (like K in normal mode)
+      "ctrl-k ctrl-i": "editor::Hover",
+
       // Symbol search
       "s s": "outline::Toggle",
       "s S": "project_symbols::Toggle",
@@ -90,7 +103,10 @@
       "space /": "pane::DeploySearch",
       // TODO: Open other files
       // Show project panel with current file
-      "\\ \\": "vim::ToggleProjectPanelFocus"
+      "\\ \\": "vim::ToggleProjectPanelFocus",
+
+      // Vertical split (like <leader>sv)
+      "space s v": "pane::SplitRight",
     }
   },
   {
@@ -114,7 +130,15 @@
     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       // visual, visual line & visual block modes
-      "g c": "editor::ToggleComments"
+      "g c": "editor::ToggleComments",
+      // Move selected lines down (like J in visual mode)
+      "J": "editor::MoveLineDown",
+      // Move selected lines up (like K in visual mode)
+      "K": "editor::MoveLineUp",
+      // Indent (like >gv)
+      ">": "editor::Indent",
+      // Unindent (like <gv)
+      "<": "editor::Outdent",
     }
   },
   // Better escape
@@ -124,6 +148,14 @@
       "j j": "vim::NormalBefore", // remap jj in insert mode to escape
       "j k": "vim::NormalBefore", // remap jk in insert mode to escape
       "alt-l": "editor::AcceptEditPrediction"
+    }
+  },
+  // Terminal escape (like <Esc><Esc> in neovim)
+  {
+    "context": "Terminal",
+    "bindings": {
+      "escape": "vim::NormalBefore",
+      "escape escape": "vim::NormalBefore",
     }
   },
   // Rename
@@ -170,8 +202,8 @@
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
       // Close project panel as project file panel on the right
-      "q": "workspace::ToggleRightDock",
-      "space e": "workspace::ToggleRightDock",
+      "q": "workspace::ToggleLeftDock",
+      "space e": "workspace::ToggleLeftDock",
       // Navigate between panel
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -193,7 +225,7 @@
     "context": "Workspace",
     "bindings": {
       // Map VSCode like keybindings
-      "cmd-b": "workspace::ToggleRightDock"
+      "cmd-b": "workspace::ToggleLeftDock"
     }
   },
   // Run nearest task
