@@ -9,6 +9,7 @@
 
       // Toggle inlay hints
       "space t i": "editor::ToggleInlayHints",
+      "space t h": "editor::ToggleInlayHints",
 
       // Toggle soft wrap
       "space u w": "editor::ToggleSoftWrap",
@@ -25,10 +26,10 @@
       // Search word under cursor
       "space s w": "pane::DeploySearch",
 
-// Chat with AI
+      // Chat with AI
       "space a c": "agent::ToggleFocus",
       // Go to file with `gf`
-      "g f": "editor::OpenExcerpts",
+      "g f": "editor::OpenExcerpts"
     }
   },
   {
@@ -48,7 +49,7 @@
       "space c r": "editor::Rename",
       "space o t": "terminal_panel::ToggleFocus",
       "g d": "editor::GoToDefinition",
-      "g D": "editor::GoToDefinition",
+      "g D": "editor::GoToDefinitionSplit",
       "g i": "editor::GoToImplementation",
       "g I": "editor::GoToImplementationSplit",
       "g t": "editor::GoToTypeDefinition",
@@ -59,24 +60,15 @@
       // TODO: Go to next/prev error
       "] e": "editor::GoToDiagnostic",
       "[ e": "editor::GoToPreviousDiagnostic",
-
-      // + Diagnostic keymaps (matching neovim <leader>nd/pd/d/q)
-      // <leader>nd - next diagnostic
-      "space n d": "editor::GoToDiagnostic",
-      // <leader>pd - previous diagnostic  
-      "space p d": "editor::GoToPreviousDiagnostic",
-      // <leader>d - show diagnostic details (float/popover)
-      "space d": "editor::GoToDiagnostic",
-      // <leader>q - quickfix list (Zed: diagnostics panel)
-      "space q": "diagnostics::Deploy",
-      // Ctrl+k Ctrl+i - LSP hover (like K in normal mode)
-      "ctrl-k ctrl-i": "editor::Hover",
-
       // Symbol search
       "s s": "outline::Toggle",
       "s S": "project_symbols::Toggle",
       // Diagnostic
       "space x x": "diagnostics::Deploy",
+      "space n d": "editor::GoToDiagnostic",
+      "space p d": "editor::GoToPreviousDiagnostic",
+      // Format buffer
+      "space f": "editor::Format",
 
       // +Git
       // Git prev/next hunk
@@ -99,20 +91,25 @@
       "ctrl-s": "workspace::Save",
       // File finder
       "space space": "file_finder::Toggle",
+      "space f f": "file_finder::Toggle",
       // Project search
       "space /": "pane::DeploySearch",
+      "space f g": "pane::DeploySearch",
+      // Find buffers (no fuzzy picker in Zed, use Space Space and type filename)
+
+      // Vertical split
+      "space s v": "pane::SplitRight",
       // TODO: Open other files
       // Show project panel with current file
       "\\ \\": "vim::ToggleProjectPanelFocus",
-
-      // Vertical split (like <leader>sv)
-      "space s v": "pane::SplitRight",
+      "\\": "vim::ToggleProjectPanelFocus"
     }
   },
   {
     "context": "ProjectPanel",
     "bindings": {
-      "\\ \\": "vim::ToggleProjectPanelFocus"
+      "\\ \\": "vim::ToggleProjectPanelFocus",
+      "\\": "vim::ToggleProjectPanelFocus"
     }
   },
   // Empty pane, set of keybindings that are available when there is no active editor
@@ -130,15 +127,7 @@
     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       // visual, visual line & visual block modes
-      "g c": "editor::ToggleComments",
-      // Move selected lines down (like J in visual mode)
-      "J": "editor::MoveLineDown",
-      // Move selected lines up (like K in visual mode)
-      "K": "editor::MoveLineUp",
-      // Indent (like >gv)
-      ">": "editor::Indent",
-      // Unindent (like <gv)
-      "<": "editor::Outdent",
+      "g c": "editor::ToggleComments"
     }
   },
   // Better escape
@@ -148,14 +137,6 @@
       "j j": "vim::NormalBefore", // remap jj in insert mode to escape
       "j k": "vim::NormalBefore", // remap jk in insert mode to escape
       "alt-l": "editor::AcceptEditPrediction"
-    }
-  },
-  // Terminal escape (like <Esc><Esc> in neovim)
-  {
-    "context": "Terminal",
-    "bindings": {
-      "escape": "vim::NormalBefore",
-      "escape escape": "vim::NormalBefore",
     }
   },
   // Rename
@@ -201,7 +182,7 @@
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
-      // Close project panel as project file panel on the right
+      // Close project panel
       "q": "workspace::ToggleLeftDock",
       "space e": "workspace::ToggleLeftDock",
       // Navigate between panel
@@ -225,7 +206,7 @@
     "context": "Workspace",
     "bindings": {
       // Map VSCode like keybindings
-      "cmd-b": "workspace::ToggleLeftDock"
+      "cmd-b": "workspace::ToggleRightDock"
     }
   },
   // Run nearest task
