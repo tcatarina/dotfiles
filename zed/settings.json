@@ -7,27 +7,27 @@
       "type": "registry"
     },
     "github-copilot-cli": {
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "edit_predictions": {
     "copilot": {
       "enable_next_edit_suggestions": true
     },
     "provider": "copilot",
-    "mode": "subtle",
+    "mode": "subtle"
   },
   "base_keymap": "Emacs",
   "ui_font_size": 20,
   "agent_ui_font_size": 20,
   "agent_buffer_font_size": 16,
-  "buffer_font_size": 18,
+  "buffer_font_size": 14,
   "buffer_font_family": "RecursiveMonospaceCasual Nerd Font",
   "theme": "Gruvbox Dark",
   "vim_mode": true,
   "vim": {
     "use_system_clipboard": "always",
-    "enable_vim_sneak": true,
+    "enable_vim_sneak": true
   },
   "relative_line_numbers": "enabled",
   "editor": {
@@ -37,60 +37,60 @@
     "dock": "right",
     "default_profile": "ask",
     "tool_permissions": {
-      "default": "allow",
+      "default": "allow"
     },
     "default_model": {
       "enable_thinking": false,
       "provider": "opencode",
-      "model": "minimax-m2.5",
+      "model": "minimax-m2.5"
     },
     "commit_message_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
-    },
+      "model": "claude-sonnet-4-6"
+    }
   },
 
   "git_panel": {
     "tree_view": true,
-    "dock": "right",
+    "dock": "right"
   },
   "centered_layout": {
     "left_padding": 0.15,
-    "right_padding": 0.15,
+    "right_padding": 0.15
   },
   "tab_bar": {
-    "show": true,
+    "show": true
   },
   "tabs": {
-    "show_diagnostics": "errors",
+    "show_diagnostics": "errors"
   },
   "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware",
+    "coloring": "indent_aware"
   },
   "inlay_hints": {
-    "enabled": true,
+    "enabled": true
   },
   "scrollbar": {
-    "show": "never",
+    "show": "never"
   },
   "project_panel": {
     "button": true,
     "dock": "left",
-    "git_status": false,
+    "git_status": false
   },
   "outline_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "collaboration_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   // Move some unnecessary panels to the left
   "notification_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   "chat_panel": {
-    "dock": "left",
+    "dock": "left"
   },
 
   "languages": {
@@ -99,59 +99,62 @@
         "enabled": true,
         "show_parameter_hints": true,
         "show_other_hints": true,
-        "show_type_hints": true,
-      },
+        "show_type_hints": true
+      }
     },
     "HTML": {
-      "format_on_save": "off",
+      "format_on_save": "off"
+    },
+    "Go": {
+      "formatter": "language_server"
     },
     "Python": {
       "format_on_save": "on",
       "language_servers": ["basedpyright", "ruff"],
       "formatter": {
         "language_server": {
-          "name": "ruff",
-        },
+          "name": "ruff"
+        }
       },
       "code_actions_on_format": {
         "source.organizeImports.ruff": true,
-        "source.fixAll.ruff": true,
-      },
+        "source.fixAll.ruff": true
+      }
     },
     "PHP": {
       "language_servers": ["intelephense", "!phpactor"],
-      "formatter": "language_server",
+      "formatter": "language_server"
     },
     "Vue.js": {
       "code_actions_on_format": {
-        "source.fixAll.eslint": true,
+        "source.fixAll.eslint": true
       },
-      "language_servers": ["vue-language-server", "typescript-language-server"],
-    },
+      "language_servers": ["vue-language-server", "typescript-language-server"]
+    }
   },
   "lsp": {
     "intelephense": {
       "settings": {
         "environment": {
-          "phpVersion": "7.4.0",
-        },
+          "phpVersion": "7.4.0"
+        }
       },
       "initialization_options": {
-        "storagePath": "/tmp/intelephense",
-      },
+        "storagePath": "/tmp/intelephense"
+      }
     },
     "basedpyright": {
       "settings": {
         "basedpyright.analysis": {
           "diagnosticMode": "workspace",
-          "typeCheckingMode": "strict",
-        },
-      },
-    },
+          "typeCheckingMode": "strict"
+        }
+      }
+    }
   },
   "file_types": {
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
-    "JSON": ["json", "jsonc", "*.code-snippets"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -173,24 +176,24 @@
     "**/.tap",
     "**/.nyc_output",
     "**/report",
-    "**/node_modules",
+    "**/node_modules"
   ],
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
 
   "terminal": {
     "font_family": "RecursiveMonospace Nerd Font",
     "env": {
-      "EDITOR": "zed --wait",
+      "EDITOR": "zed --wait"
     },
     "dock": "bottom",
     "detect_venv": {
       "on": {
-        "activate_script": "fish",
-      },
-    },
+        "activate_script": "fish"
+      }
+    }
   },
   "experimental.theme_overrides": {
     "editor.background": "#00000000",
