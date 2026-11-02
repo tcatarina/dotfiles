@@ -1,160 +1,67 @@
 {
-  "cli_default_open_behavior": "new_window",
-  "colorize_brackets": true,
-  "format_on_save": "off",
-  "agent_servers": {
-    "opencode": {
-      "type": "registry"
-    },
-    "github-copilot-cli": {
-      "type": "registry"
-    }
-  },
-  "edit_predictions": {
-    "copilot": {
-      "enable_next_edit_suggestions": true
-    },
-    "provider": "copilot",
-    "mode": "subtle"
-  },
-  "base_keymap": "Emacs",
-  "ui_font_size": 20,
-  "agent_ui_font_size": 20,
-  "agent_buffer_font_size": 16,
-  "buffer_font_size": 14,
-  "buffer_font_family": "RecursiveMonospaceCasual Nerd Font",
-  "theme": "Gruvbox Dark",
-  "vim_mode": true,
-  "vim": {
-    "use_system_clipboard": "always",
-    "enable_vim_sneak": true
-  },
-  "relative_line_numbers": "enabled",
-  "editor": {
-    "highlight_line": true
-  },
   "agent": {
-    "dock": "right",
-    "default_profile": "ask",
-    "tool_permissions": {
-      "default": "allow"
+    "commit_message_model": {
+      "model": "claude-sonnet-4-6",
+      "provider": "zed.dev"
     },
     "default_model": {
       "enable_thinking": false,
-      "provider": "opencode",
-      "model": "minimax-m2.5"
+      "model": "minimax-m2.5",
+      "provider": "opencode"
     },
-    "commit_message_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6"
+    "default_profile": "ask",
+    "dock": "right",
+    "tool_permissions": {
+      "default": "allow"
     }
   },
-
-  "git_panel": {
-    "tree_view": true,
-    "dock": "right"
+  "agent_buffer_font_size": 16,
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    },
+    "opencode": {
+      "type": "registry"
+    }
   },
+  "agent_ui_font_size": 20,
+  "base_keymap": "Emacs",
+  "buffer_font_family": "RecursiveMonospaceCasual Nerd Font",
+  "buffer_font_size": 14,
   "centered_layout": {
     "left_padding": 0.15,
     "right_padding": 0.15
   },
-  "tab_bar": {
-    "show": true
-  },
-  "tabs": {
-    "show_diagnostics": "errors"
-  },
-  "indent_guides": {
-    "enabled": true,
-    "coloring": "indent_aware"
-  },
-  "inlay_hints": {
-    "enabled": true
-  },
-  "scrollbar": {
-    "show": "never"
-  },
-  "project_panel": {
-    "button": true,
-    "dock": "left",
-    "git_status": false
-  },
-  "outline_panel": {
-    "dock": "right"
-  },
-  "collaboration_panel": {
-    "dock": "left"
-  },
-  // Move some unnecessary panels to the left
-  "notification_panel": {
-    "dock": "left"
-  },
   "chat_panel": {
     "dock": "left"
   },
-
-  "languages": {
-    "TypeScript": {
-      "inlay_hints": {
-        "enabled": true,
-        "show_parameter_hints": true,
-        "show_other_hints": true,
-        "show_type_hints": true
-      }
-    },
-    "HTML": {
-      "format_on_save": "off"
-    },
-    "Go": {
-      "formatter": "language_server"
-    },
-    "Python": {
-      "format_on_save": "on",
-      "language_servers": ["basedpyright", "ruff"],
-      "formatter": {
-        "language_server": {
-          "name": "ruff"
-        }
-      },
-      "code_actions_on_format": {
-        "source.organizeImports.ruff": true,
-        "source.fixAll.ruff": true
-      }
-    },
-    "PHP": {
-      "language_servers": ["intelephense", "!phpactor"],
-      "formatter": "language_server"
-    },
-    "Vue.js": {
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      },
-      "language_servers": ["vue-language-server", "typescript-language-server"]
-    }
+  "cli_default_open_behavior": "new_window",
+  "collaboration_panel": {
+    "dock": "left"
   },
-  "lsp": {
-    "intelephense": {
-      "settings": {
-        "environment": {
-          "phpVersion": "7.4.0"
-        }
-      },
-      "initialization_options": {
-        "storagePath": "/tmp/intelephense"
-      }
+  "colorize_brackets": true,
+  "edit_predictions": {
+    "copilot": {
+      "enable_next_edit_suggestions": true
     },
-    "basedpyright": {
-      "settings": {
-        "basedpyright.analysis": {
-          "diagnosticMode": "workspace",
-          "typeCheckingMode": "strict"
-        }
-      }
-    }
+    "mode": "subtle",
+    "provider": "copilot"
   },
-  "file_types": {
-    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
-    "JSON": ["json", "jsonc", "*.code-snippets"]
+  "editor": {
+    "highlight_line": true
+  },
+  "experimental.theme_overrides": {
+    "background": "#000000E6",
+    "background.appearance": "transparent",
+    "editor.background": "#00000000",
+    "editor.gutter.background": "#00000000",
+    "status_bar.background": "#000000E6",
+    "tab.active_background": "#00000000",
+    "tab.inactive_background": "#00000000",
+    "tab_bar.background": "#00000000",
+    "title_bar.background": "#000000E6",
+    "title_bar.inactive_background": "#000000E6",
+    "toolbar.background": "#00000000"
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -178,39 +85,144 @@
     "**/report",
     "**/node_modules"
   ],
+  "file_types": {
+    "Dockerfile": [
+      "Dockerfile",
+      "Dockerfile.*"
+    ],
+    "JSON": [
+      "json",
+      "jsonc",
+      "*.code-snippets"
+    ]
+  },
+  "format_on_save": "off",
+  "git_panel": {
+    "dock": "right",
+    "tree_view": true
+  },
+  "indent_guides": {
+    "coloring": "indent_aware",
+    "enabled": true
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "languages": {
+    "Go": {
+      "formatter": "language_server"
+    },
+    "HTML": {
+      "format_on_save": "off"
+    },
+    "PHP": {
+      "formatter": "language_server",
+      "language_servers": [
+        "intelephense",
+        "!phpactor"
+      ]
+    },
+    "Python": {
+      "code_actions_on_format": {
+        "source.fixAll.ruff": true,
+        "source.organizeImports.ruff": true
+      },
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      },
+      "language_servers": [
+        "basedpyright",
+        "ruff"
+      ]
+    },
+    "TypeScript": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_other_hints": true,
+        "show_parameter_hints": true,
+        "show_type_hints": true
+      }
+    },
+    "Vue.js": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "language_servers": [
+        "vue-language-server",
+        "typescript-language-server"
+      ]
+    }
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict"
+        }
+      }
+    },
+    "intelephense": {
+      "initialization_options": {
+        "storagePath": "/tmp/intelephense"
+      },
+      "settings": {
+        "environment": {
+          "phpVersion": "7.4.0"
+        }
+      }
+    }
+  },
+  "notification_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "project_panel": {
+    "button": true,
+    "dock": "left",
+    "git_status": false
+  },
+  "relative_line_numbers": "enabled",
+  "scrollbar": {
+    "show": "never"
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "tabs": {
+    "show_diagnostics": "errors"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
-
   "terminal": {
-    "font_family": "RecursiveMonospace Nerd Font",
-    "env": {
-      "EDITOR": "zed --wait"
-    },
-    "dock": "bottom",
     "detect_venv": {
       "on": {
         "activate_script": "fish"
       }
-    }
+    },
+    "dock": "bottom",
+    "env": {
+      "EDITOR": "zed --wait"
+    },
+    "font_family": "RecursiveMonospace Nerd Font"
   },
-  "experimental.theme_overrides": {
-    "editor.background": "#00000000",
-    "background": "#000000E6",
-    "tab_bar.background": "#00000000",
-    "title_bar.background": "#000000E6",
-    "title_bar.inactive_background": "#000000E6",
-    "editor.gutter.background": "#00000000",
-    "background.appearance": "transparent",
-    "tab.active_background": "#00000000",
-    "tab.inactive_background": "#00000000",
-    "status_bar.background": "#000000E6",
-    "toolbar.background": "#00000000"
-  },
+  "theme": "Gruvbox Dark",
   "theme_overrides": {
     "Gruvbox Dark": {
       "elevated_surface.background": "#000000E6"
     }
-  }
+  },
+  "ui_font_size": 20,
+  "vim": {
+    "enable_vim_sneak": true,
+    "use_system_clipboard": "always"
+  },
+  "vim_mode": true
 }

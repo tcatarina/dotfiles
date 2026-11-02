@@ -1,0 +1,186 @@
+[
+  {
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w j": "workspace::ActivatePaneDown",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w l": "workspace::ActivatePaneRight"
+    },
+    "context": "Dock"
+  },
+  {
+    "bindings": {
+      "ctrl-x g": "git_panel::ToggleFocus",
+      "g f": "editor::OpenExcerpts",
+      "space a c": "agent::ToggleFocus",
+      "space c z": "workspace::ToggleCenteredLayout",
+      "space f p": "projects::OpenRecent",
+      "space g h d": "editor::ToggleSelectedDiffHunks",
+      "space m P": "markdown::OpenPreviewToTheSide",
+      "space m p": "markdown::OpenPreview",
+      "space s w": "pane::DeploySearch",
+      "space t h": "editor::ToggleInlayHints",
+      "space t i": "editor::ToggleInlayHints",
+      "space u w": "editor::ToggleSoftWrap"
+    },
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu"
+  },
+  {
+    "bindings": {
+      "alt-l": "editor::AcceptEditPrediction"
+    },
+    "context": "Editor && edit_prediction",
+    "unbind": {
+      "alt-tab": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "bindings": {
+      "alt-l": "editor::AcceptEditPrediction"
+    },
+    "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
+    "unbind": {
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "bindings": {
+      "alt-l": "editor::AcceptEditPrediction",
+      "j j": "vim::NormalBefore",
+      "j k": "vim::NormalBefore"
+    },
+    "context": "Editor && vim_mode == insert && !menu"
+  },
+  {
+    "bindings": {
+      "[ d": "editor::GoToPreviousDiagnostic",
+      "[ e": "editor::GoToPreviousDiagnostic",
+      "[ h": "editor::GoToPreviousHunk",
+      "\\": "vim::ToggleProjectPanelFocus",
+      "\\ \\": "vim::ToggleProjectPanelFocus",
+      "] d": "editor::GoToDiagnostic",
+      "] e": "editor::GoToDiagnostic",
+      "] h": "editor::GoToHunk",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-q": "pane::CloseActiveItem",
+      "ctrl-s": "workspace::Save",
+      "g D": "editor::GoToDefinitionSplit",
+      "g I": "editor::GoToImplementationSplit",
+      "g T": "editor::GoToTypeDefinitionSplit",
+      "g d": "editor::GoToDefinition",
+      "g i": "editor::GoToImplementation",
+      "g r": "editor::FindAllReferences",
+      "g t": "editor::GoToTypeDefinition",
+      "s S": "project_symbols::Toggle",
+      "s s": "outline::Toggle",
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
+      "shift-q": "pane::CloseActiveItem",
+      "space .": "editor::ToggleCodeActions",
+      "space /": "pane::DeploySearch",
+      "space b d": "pane::CloseActiveItem",
+      "space b o": "pane::CloseInactiveItems",
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "space f": "editor::Format",
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+      "space n d": "editor::GoToDiagnostic",
+      "space o t": "terminal_panel::ToggleFocus",
+      "space p d": "editor::GoToPreviousDiagnostic",
+      "space s v": "pane::SplitRight",
+      "space space": "file_finder::Toggle",
+      "space x x": "diagnostics::Deploy"
+    },
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu"
+  },
+  {
+    "bindings": {
+      "g c": "editor::ToggleComments"
+    },
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu"
+  },
+  {
+    "bindings": {
+      "c": "vim::CurrentLine",
+      "r": "editor::Rename",
+      "a": "editor::ToggleCodeActions"
+    },
+    "context": "Editor && vim_operator == c"
+  },
+  {
+    "bindings": {
+      "space f p": "projects::OpenRecent",
+      "space space": "file_finder::Toggle"
+    },
+    "context": "EmptyPane || SharedScreen"
+  },
+  {
+    "bindings": {
+      "space r t": [
+        "editor::SpawnNearestTask",
+        {
+          "reveal": "no_focus"
+        }
+      ]
+    },
+    "context": "EmptyPane || SharedScreen || vim_mode == normal"
+  },
+  {
+    "bindings": {
+      "\\": "vim::ToggleProjectPanelFocus",
+      "\\ \\": "vim::ToggleProjectPanelFocus"
+    },
+    "context": "ProjectPanel"
+  },
+  {
+    "bindings": {
+      "A": "project_panel::NewDirectory",
+      "a": "project_panel::NewFile",
+      "c": "project_panel::Copy",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "d": "project_panel::Delete",
+      "p": "project_panel::Paste",
+      "q": "workspace::ToggleLeftDock",
+      "r": "project_panel::Rename",
+      "space e": "workspace::ToggleLeftDock",
+      "x": "project_panel::Cut"
+    },
+    "context": "ProjectPanel && not_editing"
+  },
+  {
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    },
+    "context": "Terminal"
+  },
+  {
+    "bindings": {
+      "ctrl-\\": "terminal_panel::ToggleFocus",
+      "cmd-b": "workspace::ToggleRightDock"
+    },
+    "context": "Workspace"
+  },
+  {
+    "bindings": {
+      "S": [
+        "vim::PushSneakBackward",
+        {}
+      ],
+      "s": [
+        "vim::PushSneak",
+        {}
+      ]
+    },
+    "context": "vim_mode == normal || vim_mode == visual"
+  }
+]

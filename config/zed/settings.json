@@ -1,0 +1,228 @@
+{
+  "agent": {
+    "commit_message_model": {
+      "model": "claude-sonnet-4-6",
+      "provider": "zed.dev"
+    },
+    "default_model": {
+      "enable_thinking": false,
+      "model": "minimax-m2.5",
+      "provider": "opencode"
+    },
+    "default_profile": "ask",
+    "dock": "right",
+    "tool_permissions": {
+      "default": "allow"
+    }
+  },
+  "agent_buffer_font_size": 16,
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    },
+    "opencode": {
+      "type": "registry"
+    }
+  },
+  "agent_ui_font_size": 20,
+  "base_keymap": "Emacs",
+  "buffer_font_family": "RecursiveMonospaceCasual Nerd Font",
+  "buffer_font_size": 14,
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+  "chat_panel": {
+    "dock": "left"
+  },
+  "cli_default_open_behavior": "new_window",
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "colorize_brackets": true,
+  "edit_predictions": {
+    "copilot": {
+      "enable_next_edit_suggestions": true
+    },
+    "mode": "subtle",
+    "provider": "copilot"
+  },
+  "editor": {
+    "highlight_line": true
+  },
+  "experimental.theme_overrides": {
+    "background": "#000000E6",
+    "background.appearance": "transparent",
+    "editor.background": "#00000000",
+    "editor.gutter.background": "#00000000",
+    "status_bar.background": "#000000E6",
+    "tab.active_background": "#00000000",
+    "tab.inactive_background": "#00000000",
+    "tab_bar.background": "#00000000",
+    "title_bar.background": "#000000E6",
+    "title_bar.inactive_background": "#000000E6",
+    "toolbar.background": "#00000000"
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/out",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/node_modules"
+  ],
+  "file_types": {
+    "Dockerfile": [
+      "Dockerfile",
+      "Dockerfile.*"
+    ],
+    "JSON": [
+      "json",
+      "jsonc",
+      "*.code-snippets"
+    ]
+  },
+  "format_on_save": "off",
+  "git_panel": {
+    "dock": "right",
+    "tree_view": true
+  },
+  "indent_guides": {
+    "coloring": "indent_aware",
+    "enabled": true
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "languages": {
+    "Go": {
+      "formatter": "language_server"
+    },
+    "HTML": {
+      "format_on_save": "off"
+    },
+    "PHP": {
+      "formatter": "language_server",
+      "language_servers": [
+        "intelephense",
+        "!phpactor"
+      ]
+    },
+    "Python": {
+      "code_actions_on_format": {
+        "source.fixAll.ruff": true,
+        "source.organizeImports.ruff": true
+      },
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      },
+      "language_servers": [
+        "basedpyright",
+        "ruff"
+      ]
+    },
+    "TypeScript": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_other_hints": true,
+        "show_parameter_hints": true,
+        "show_type_hints": true
+      }
+    },
+    "Vue.js": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "language_servers": [
+        "vue-language-server",
+        "typescript-language-server"
+      ]
+    }
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict"
+        }
+      }
+    },
+    "intelephense": {
+      "initialization_options": {
+        "storagePath": "/tmp/intelephense"
+      },
+      "settings": {
+        "environment": {
+          "phpVersion": "7.4.0"
+        }
+      }
+    }
+  },
+  "notification_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "project_panel": {
+    "button": true,
+    "dock": "left",
+    "git_status": false
+  },
+  "relative_line_numbers": "enabled",
+  "scrollbar": {
+    "show": "never"
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "tabs": {
+    "show_diagnostics": "errors"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        "activate_script": "fish"
+      }
+    },
+    "dock": "bottom",
+    "env": {
+      "EDITOR": "zed --wait"
+    },
+    "font_family": "RecursiveMonospace Nerd Font"
+  },
+  "theme": "Gruvbox Dark",
+  "theme_overrides": {
+    "Gruvbox Dark": {
+      "elevated_surface.background": "#000000E6"
+    }
+  },
+  "ui_font_size": 20,
+  "vim": {
+    "enable_vim_sneak": true,
+    "use_system_clipboard": "always"
+  },
+  "vim_mode": true
+}
