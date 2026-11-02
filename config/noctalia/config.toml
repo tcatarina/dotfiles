@@ -1,0 +1,221 @@
+[backdrop]
+blur_intensity = 0.0
+tint_intensity = 0.99999997764825821
+
+[bar.default]
+border = "surface_container"
+border_width = 0.5
+capsule = true
+capsule_radius = 6
+center = [ "workspaces", "media", "notifications" ]
+contact_shadow = true
+end = [ "tray", "power_profile", "network", "volume", "brightness", "battery", "clock", "control-center" ]
+font_family = "Adwaita Sans"
+margin_ends = 0
+padding = 8
+panel_overlap = 0
+radius = 0
+shadow = false
+start = [ "launcher", "active_window" ]
+thickness = 33
+
+[battery]
+warning_threshold = 40
+
+[calendar]
+
+[control_center.calendar]
+show_events_card = false
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "dark_mode"
+
+[[control_center.shortcuts]]
+type = "clipboard"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[dock]
+auto_hide = true
+reserve_space = false
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 10
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 300.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 350.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = false
+    timeout = 300.0
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-login-box@HDMI-A-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[nightlight]
+enabled = false
+
+[plugins]
+enabled = [ "kenn/keybind-cheatsheet" ]
+
+[shell]
+avatar_path = ""
+font_family = "Adwaita Sans"
+launch_apps_as_systemd_services = false
+niri_overview_type_to_launch_enabled = false
+password_style = "random"
+polkit_agent = true
+screen_time_enabled = false
+setup_wizard_enabled = false
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    launcher_placement = "attached"
+
+[theme]
+builtin = "Noctalia"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-rainbow"
+
+    [theme.templates]
+    builtin_ids = [ "ghostty", "gtk3", "gtk4" ]
+    community_ids = []
+
+[wallpaper]
+directory = "/home/thiago/Pictures/Wallpapers"
+
+    [wallpaper.default]
+    path = "/home/thiago/Pictures/Wallpapers/nixos-wallpaper.png"
+
+    [wallpaper.last]
+    path = "/home/thiago/Pictures/Wallpapers/nixos-wallpaper.png"
+
+[widget.active_window]
+anchor = true
+
+[widget.battery]
+display_mode = "graphic"
+show_label = false
+
+[widget.brightness]
+scale = 1.1500000000000001
+show_label = false
+
+[widget.clock]
+format = "{:%I:%M %p}"
+timezone = "America/Sao_Paulo"
+
+[widget.launcher]
+anchor = true
+capsule = true
+capsule_padding = 4
+capsule_radius = 5
+custom_image = ""
+glyph = "apps"
+scale = 1.2
+
+[widget.media]
+album_art_only = true
+hide_when_no_media = true
+max_length = 170
+title_scroll = "on_hover"
+
+[widget.network]
+scale = 1.25
+show_label = false
+
+[widget.tray]
+hide_passive = false
+
+[widget.volume]
+scale = 1.05
+show_label = false
