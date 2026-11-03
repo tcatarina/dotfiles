@@ -1,0 +1,5 @@
+font-family = JetBrainsMono Nerd Font
+theme = noctalia
+background-opacity = 0.80
+background-opacity-cells = true
+background-blur = true
