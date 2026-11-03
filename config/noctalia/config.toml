@@ -219,3 +219,6 @@ hide_passive = false
 [widget.volume]
 scale = 1.05
 show_label = false
+
+[widget.workspaces]
+hide_when_empty = true
