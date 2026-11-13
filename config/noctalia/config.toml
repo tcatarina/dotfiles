@@ -7,7 +7,7 @@ border = "surface_container"
 border_width = 0.5
 capsule = true
 capsule_radius = 6
-center = [ "workspaces", "media", "notifications" ]
+center = [ "workspaces", "media" ]
 contact_shadow = true
 end = [ "tray", "power_profile", "network", "volume", "brightness", "battery", "clock", "control-center" ]
 font_family = "Adwaita Sans"
@@ -16,7 +16,7 @@ padding = 8
 panel_overlap = 0
 radius = 0
 shadow = false
-start = [ "launcher", "active_window" ]
+start = [ "launcher", "notifications", "cpu", "ram", "active_window" ]
 thickness = 33
 
 [battery]
@@ -25,7 +25,7 @@ warning_threshold = 40
 [calendar]
 
 [control_center.calendar]
-show_events_card = false
+show_events_card = true
 
 [[control_center.shortcuts]]
 type = "wifi"
@@ -219,6 +219,12 @@ hide_passive = false
 [widget.volume]
 scale = 1.05
 show_label = false
+
+[widget.cpu]
+show_value = true
+
+[widget.ram]
+show_value = true
 
 [widget.workspaces]
 hide_when_empty = true
