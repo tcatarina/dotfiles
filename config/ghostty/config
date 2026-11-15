@@ -1,5 +1,5 @@
 font-family = JetBrainsMono Nerd Font
-theme = noctalia
+theme = Gruvbox Material Dark
 background-opacity = 0.80
 background-opacity-cells = true
 background-blur = true
