@@ -160,6 +160,11 @@ setup_wizard_enabled = false
     clipboard_placement = "attached"
     launcher_placement = "attached"
 
+    # Replaces the NixOS grim/slurp/swappy way-print script: copy, then annotate/save.
+    [shell.screenshot]
+    annotate = true
+    directory = "/home/thiago/images/screenshots"
+
 [theme]
 builtin = "Noctalia"
 mode = "dark"
@@ -167,7 +172,7 @@ source = "wallpaper"
 wallpaper_scheme = "m3-rainbow"
 
     [theme.templates]
-    builtin_ids = [ "ghostty", "gtk3", "gtk4" ]
+    builtin_ids = [ "gtk3", "gtk4" ]
     community_ids = []
 
 [wallpaper]
