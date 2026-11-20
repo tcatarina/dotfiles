@@ -9,7 +9,7 @@ capsule = true
 capsule_radius = 6
 center = [ "workspaces", "media" ]
 contact_shadow = true
-end = [ "tray", "power_profile", "network", "volume", "brightness", "battery", "clock", "control-center" ]
+end = [ "tray", "power_profile", "network", "headset_battery", "volume", "brightness", "battery", "clock", "control-center" ]
 font_family = "Adwaita Sans"
 margin_ends = 0
 padding = 8
@@ -190,6 +190,14 @@ anchor = true
 [widget.battery]
 display_mode = "graphic"
 show_label = false
+
+# QCY H3 Bluetooth headset (UPower serial = its Bluetooth address); hidden while disconnected.
+[widget.headset_battery]
+type = "battery"
+device = "84:AC:60:12:EE:36"
+display_mode = "glyph"
+show_label = true
+label_content = "percent"
 
 [widget.brightness]
 scale = 1.1500000000000001
